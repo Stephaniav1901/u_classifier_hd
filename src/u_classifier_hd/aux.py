@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.linalg import toeplitz
-from scipy.stats import norm, multivariate_normal, probplot
-from typing import List, Dict, Any, Tuple
+from scipy.stats import norm, probplot
+from typing import Dict, Any, Tuple
 
 from .core import u_classifier_multisample
 
@@ -73,6 +73,7 @@ def generate_data(n: int, mu: np.ndarray, cov: np.ndarray, dist: str = 'normal',
         return np.random.multivariate_normal(mu, cov, n)
     elif dist == 't-student':
         # Gera dados da distribuição t de Student.
+        p = len(mu)
         y = np.random.chisquare(df, n) / df
         z = np.random.multivariate_normal(np.zeros(p), cov, n)
         return mu + z / np.sqrt(y[:, np.newaxis])

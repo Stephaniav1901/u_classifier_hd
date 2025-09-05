@@ -1,5 +1,5 @@
 # U-Classifier
-Este pacote é uma implementação em Python do U-Classifier para dados de alta dimensionalidade, conforme descrito no artigo de Ahmad & Pavlenko (2018).
+Este pacote é uma implementação em Python do U-Classifier para dados de alta dimensionalidade, conforme descrito no artigo de Ahmad & Pavlenko (2018), para fins educativos.
 
 ## Instalação
 Para configurar o ambiente e instalar o pacote para desenvolvimento, siga os passos abaixo. Recomenda-se o uso do `uv` para um gerenciamento de dependências rápido e fácil.
@@ -52,4 +52,11 @@ uv pip install git+https://github.com/Stephaniav1901/u_classifier_hd.git
 Após a instalação, você já pode importar e usar o pacote nos seus scripts e notebooks.
 
 ## Uso
-O diretório examples/ contém notebooks que demonstram como usar o pacote.
+O diretório `examples/` contém notebooks que demonstram como usar o pacote para replicar as simulações do artigo e aplicá-lo a dados reais.
+
+### Executando os Exemplos (Jupyter Notebooks)
+Para executar os notebooks no diretório `examples/` (por exemplo, no VS Code ou Jupyter Lab) usando o ambiente virtual que você criou, é necessário instalar um pacote adicional que permite ao Jupyter encontrar o seu ambiente:
+```
+uv pip install ipykernel
+```
+Após instalar o `ipykernel`, abra o notebook. O seu editor (como o VS Code) deverá permitir que você selecione o interpretador Python do seu ambiente .venv como o "kernel" do notebook.
