@@ -4,31 +4,29 @@ Este pacote é uma implementação em Python do U-Classifier para dados de alta 
 ## Instalação
 Para configurar o ambiente e instalar o pacote para desenvolvimento, siga os passos abaixo. Recomenda-se o uso do `uv` para um gerenciamento de dependências rápido e fácil.
 
-### Passo 1: Clone o repositório
+### Passo 1: Pré-requisitos
 
-Se você ainda não tem o projeto na sua máquina, comece por clonar o repositório:
-
-```
-git clone [https://github.com/Stephaniav1901/u_classifier_hd.git](https://github.com/Stephaniav1901/u_classifier_hd.git)
-cd u_classifier_hd
-```
-
-### Passo 2: Instale o `uv`
-
-Se você ainda não tem o `uv`, instale-o globalmente com pip:
+Se você ainda não tem o `uv`, instale-o com:
 
 ```
 pip install uv
 ```
 
-### Passo 3: Crie e ative um ambiente virtual
+### Passo 2: Crie e ative um ambiente virtual (Recomendado)
 
-Dentro da pasta do projeto, use o `uv` para criar um ambiente virtual isolado. Isso garante que as dependências do projeto não interfiram com outros projetos na sua máquina.
+Para evitar conflitos com outros pacotes Python e manter as dependências do projeto isoladas, é altamente recomendado criar um ambiente virtual antes de instalar o pacote.
 
+### 2.1. Crie uma pasta para o seu projeto e navegue até ela:
+```
+mkdir meu-projeto-analise
+cd meu-projeto-analise
+```
+### 2.2. Crie o ambiente virtual:
+Este comando irá criar uma pasta `.venv` no seu diretório com uma instalação limpa do Python.
 ```
 uv venv
 ```
-
+### 2.3. Ative o ambiente:
 Após a criação, ative o ambiente:
 
 * No macOS/Linux:
@@ -42,14 +40,16 @@ source .venv/bin/activate
 ```
 .venv\Scripts\Activate.ps1
 ```
+Quando o ambiente estiver ativo, você verá `(.venv)` no início do seu prompt de terminal.
 
-### Passo 4: Instale o pacote e suas dependências
+### Passo 3: Instale o pacote e suas dependências
 
 Com o ambiente ativado, instale o pacote `uclassifier`. Este comando lerá o arquivo `pyproject.toml`, instalará todas as dependências listadas (como numpy, pandas, etc.) e o pacote.
 
 ```
-uv pip install uclassifier
+uv pip install git+https://github.com/Stephaniav1901/u_classifier_hd.git
 ```
+Após a instalação, você já pode importar e usar o pacote nos seus scripts e notebooks.
 
 ## Uso
 O diretório examples/ contém notebooks que demonstram como usar o pacote.
