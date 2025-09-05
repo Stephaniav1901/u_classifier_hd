@@ -1,0 +1,23 @@
+[project]
+name = "u-classifier-hd"
+version = "0.1.0"
+authors = [
+  { name="Stephania Vellinho", email="stephaniavellinho@hotmail.com" },
+]
+description = "Implementação do U-Classifier para dados de alta dimensionalidade."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+]
+
+[project.scripts]
+u-classifier-hd = "u_classifier_hd:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
